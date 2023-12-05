@@ -24,9 +24,9 @@ namespace polygon
 		Vector2 Normalise() const;
 
 		// Operators (Constant):
-		inline Vector2 operator+(Vector2& pRight) const { return Vector2(mX + pRight.mX, mY + pRight.mY); }
-		inline Vector2 operator-(Vector2& pRight) const { return Vector2(mX - pRight.mX, mY - pRight.mY); }
-		inline Vector2 operator/(Vector2& pRight) const { return Vector2(mX / pRight.mX, mY / pRight.mY); }
+		inline Vector2 operator+(const Vector2& pRight) const { return Vector2(mX + pRight.mX, mY + pRight.mY); }
+		inline Vector2 operator-(const Vector2& pRight) const { return Vector2(mX - pRight.mX, mY - pRight.mY); }
+		inline Vector2 operator/(const Vector2& pRight) const { return Vector2(mX / pRight.mX, mY / pRight.mY); }
 
 		// Operators (Non-Constant).
 		inline void operator=(Vector2& pRight)
@@ -35,19 +35,19 @@ namespace polygon
 			mY = pRight.mY;
 		}
 
-		inline void operator-=(Vector2& pRight)
+		inline void operator-=(const Vector2& pRight)
 		{
 			mX -= pRight.mX;
 			mY -= pRight.mY;
 		}
 
-		inline void operator+=(Vector2& pRight)
+		inline void operator+=(const Vector2& pRight)
 		{
 			mX += pRight.mX;
 			mY += pRight.mY;
 		}
 
-		inline void operator/=(Vector2& pRight)
+		inline void operator/=(const Vector2& pRight)
 		{
 			mX /= pRight.mX;
 			mY /= pRight.mY;
