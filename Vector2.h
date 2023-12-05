@@ -13,8 +13,8 @@ namespace polygon
 		const Float32 DEFAULT_COMPONENT_VALUE = 0.0f;
 
 		// Attributes:
-		Float32 mX = DEFAULT_COMPONENT_VALUE;
-		Float32 mY = DEFAULT_COMPONENT_VALUE;
+		Float32 mX { DEFAULT_COMPONENT_VALUE };
+		Float32 mY { DEFAULT_COMPONENT_VALUE };
 
 		// Constructor:
 		Vector2(Float32 pX = 0.0f, Float32 pY = 0.0f) : mX(pX), mY(pY) { }
@@ -22,11 +22,6 @@ namespace polygon
 		// Methods:
 		Float32 Magnitude() const;
 		Vector2 Normalise() const;
-
-		// Operators (Constant):
-		inline Vector2 operator+(const Vector2& pRight) const { return Vector2(mX + pRight.mX, mY + pRight.mY); }
-		inline Vector2 operator-(const Vector2& pRight) const { return Vector2(mX - pRight.mX, mY - pRight.mY); }
-		inline Vector2 operator/(const Vector2& pRight) const { return Vector2(mX / pRight.mX, mY / pRight.mY); }
 
 		// Operators (Non-Constant).
 		inline void operator=(const Vector2& pRight)
@@ -53,6 +48,11 @@ namespace polygon
 			mY /= pRight.mY;
 		}
 	};
+
+	// Operators (Constant):
+	inline Vector2 operator+(const Vector2& pLeft, const Vector2& pRight) { return Vector2(pLeft.mX + pRight.mX, pLeft.mY + pRight.mY); }
+	inline Vector2 operator-(const Vector2& pLeft, const Vector2& pRight) { return Vector2(pLeft.mX - pRight.mX, pLeft.mY - pRight.mY); }
+	inline Vector2 operator/(const Vector2& pLeft, const Vector2& pRight) { return Vector2(pLeft.mX / pRight.mX, pLeft.mY / pRight.mY); }
 }
 
 #endif // !POLYGON_MATHEMATICS_VECTOR_H
