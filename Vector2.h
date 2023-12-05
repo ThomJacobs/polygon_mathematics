@@ -23,8 +23,35 @@ namespace polygon
 		Float32 Magnitude() const;
 		Vector2 Normalise() const;
 
-		// Operators:
+		// Operators (Constant):
+		inline Vector2 operator+(Vector2& pRight) const { return Vector2(mX + pRight.mX, mY + pRight.mY); }
+		inline Vector2 operator-(Vector2& pRight) const { return Vector2(mX - pRight.mX, mY - pRight.mY); }
+		inline Vector2 operator/(Vector2& pRight) const { return Vector2(mX / pRight.mX, mY / pRight.mY); }
 
+		// Operators (Non-Constant).
+		inline void operator=(Vector2& pRight)
+		{
+			mX = pRight.mX;
+			mY = pRight.mY;
+		}
+
+		inline void operator-=(Vector2& pRight)
+		{
+			mX -= pRight.mX;
+			mY -= pRight.mY;
+		}
+
+		inline void operator+=(Vector2& pRight)
+		{
+			mX += pRight.mX;
+			mY += pRight.mY;
+		}
+
+		inline void operator/=(Vector2& pRight)
+		{
+			mX /= pRight.mX;
+			mY /= pRight.mY;
+		}
 	};
 }
 
