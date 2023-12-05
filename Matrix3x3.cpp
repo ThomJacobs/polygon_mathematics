@@ -1,4 +1,4 @@
-#include "Matrix3x3.h"
+#include "matrix3x3.h"
 
 // Constants:
 const polygon::Float32 polygon::Matrix3x3::DEFAULT_INITIALISER = 0.0f;
