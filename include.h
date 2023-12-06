@@ -3,5 +3,6 @@
 
 // Included Files:
 #include "matrix3x3.h"
+#include "rotator.h"
 
 #endif // !POLYGON_MATHEMATICS_INCLUDE_H
