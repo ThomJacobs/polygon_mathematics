@@ -28,7 +28,7 @@ namespace polygon
 		// Methods:
 		inline Vector2 LocalUp() const { return {mCosTheta, mSinTheta}; }
 		inline Vector2 LocalRight() const { return {-mSinTheta, mCosTheta}; }
-		inline Float32 EulerAngles() const { return acos(mCosTheta); }
+		inline Float32 EulerAngles() const { return acos(mCosTheta) * Rotator2D::RadiansToDegrees; }
 
 		void SetEulerAngles(const Float32 pEulerAngles);
 		void SetRadians(const Float32 pRadians);
