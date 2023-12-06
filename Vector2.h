@@ -12,6 +12,12 @@ namespace polygon
 		// Constants:
 		const Float32 DEFAULT_COMPONENT_VALUE = 0.0f;
 
+		// Static Constants:
+		static const Vector2 GLOBAL_UP;
+		static const Vector2 GLOBAL_DOWN;
+		static const Vector2 GLOBAL_LEFT;
+		static const Vector2 GLOBAL_RIGHT;
+
 		// Attributes:
 		Float32 mX { DEFAULT_COMPONENT_VALUE };
 		Float32 mY { DEFAULT_COMPONENT_VALUE };
